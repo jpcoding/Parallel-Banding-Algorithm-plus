@@ -1,0 +1,63 @@
+# Compiled executables
+# 2D executables
+pba_edt_test_2d
+wrapper_example_2d
+# 3D executables  
+pba_edt_test
+wrapper_example
+test
+# Common executables
+main
+# Debug executables
+simple_test
+debug_boundary
+debug_data
+cpu_debug
+simple_debug
+
+# Build directory
+build/
+
+# Data files
+*.dat
+
+# Log files
+*.log
+
+# CUDA compiled objects
+*.o
+*.obj
+
+# Temporary files
+*.tmp
+*.temp
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor temporary files
+*~
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Python cache (for Jupyter notebooks)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Core dumps
+core
+core.*

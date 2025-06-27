@@ -37,9 +37,6 @@ SOFTWARE.
 
 */
 
-#include <device_functions.h>
-#include <helper_timer.h>
-
 #include "pba3D.h"
 
 // Parameters for CUDA kernel executions
@@ -54,8 +51,8 @@ size_t pbaMemSize;
 int pbaCurrentBuffer; 
 int pbaTexSize;
 
-texture<int> pbaTexColor; 
-texture<int> pbaTexLinks; 
+// texture<int> pbaTexColor; 
+// texture<int> pbaTexLinks; 
 
 // Kernels
 #include "pba3DKernel.h"

@@ -43,6 +43,7 @@ SOFTWARE.
 #include <math.h>
 #include <time.h>
 #include <ctype.h>
+#include <limits.h>
 
 #include "pba/pba2D.h"
 
@@ -80,7 +81,7 @@ unsigned long CONG()
 { return (jcong = 69069 * jcong + 1234567); }
 unsigned long rand_int()         // [0,2^32-1]
 { return ((MWC() ^ CONG()) + SHR3()); }
-double random()     // [0,1)
+double randomDouble()     // [0,1)
 { return ((double) rand_int() / (double(ULONG_MAX)+1)); }
 
 // Generate input points
@@ -96,8 +97,8 @@ void generateRandomPoints(int width, int height, int nPoints)
     for (int i = 0; i < nPoints; i++)
     {
         do {
-            tx = int(random() * width); 
-            ty = int(random() * height); 
+            tx = int(randomDouble() * width); 
+            ty = int(randomDouble() * height); 
         } while (inputVoronoi[(ty * width + tx) * 2] != MARKER); 
 
         inputVoronoi[(ty * width + tx) * 2    ] = tx; 
